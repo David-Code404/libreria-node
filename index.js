@@ -78,7 +78,15 @@ app.post('/api/login', (req, res) => {
 
 // Ruta principal
 app.get('/', (req, res) => {
-    res.send('<h1>Bienvenido a la Librería en Línea</h1><p>Visita /api/categories, /api/products, /api/links o /api/users para obtener datos.</p>');
+    res.send(`
+        <h1>Bienvenido a la Librería en Línea</h1>
+        <p>Visita las siguientes rutas:</p>
+        <ul>
+            <li><a href="/api/categories">Categorías</a></li>
+            <li><a href="/api/products">Productos</a></li>
+            <li><a href="/api/users">Usuarios</a></li>
+        </ul>
+    `);
 });
 
 // Iniciar el servidor
